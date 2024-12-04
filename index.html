@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cruds</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="crud">
+<div class="header"> 
+        <h1>CRUDS</h1>
+        <H5>product mangment system</H5>
+    </div>
+    <div class="inputs ">
+        <input onkeyup="getTotal()" type="text" id="title" placeholder="title">
+        <div class="price ">
+        <input onkeyup="getTotal()" type="number" id="price" placeholder="price">
+        <input onkeyup="getTotal()" type="number" id="taxes" placeholder="taxes">
+        <input onkeyup="getTotal()" type="number" id="ads" placeholder="ads">
+        <input onkeyup="getTotal()" type="number" id="discount" placeholder="discount">
+        <small class="position-relative" id="total"></small>
+
+        </div>
+        <input type="number" id="count" placeholder="count">
+        <input type="text" id="category" placeholder="category">
+        <div class="text-center">
+            <button  class="btn btn-success w-75 my-3 text-uppercase" id="submit">create</button>
+            <p class="d-none mt-2 text-success" id="Message">The Process Succssfully Done</p>
+                    
+        </div>
+       
+    </div>
+    <div class="output" >
+        <div class="searchBlock">
+        <input onkeyup="searchData(this.value)" type="text" id="search" placeholder="search">
+        <div class="btnSearch d-flex justify-content-around ">
+        <button onclick="getSearchMood( this.id)" class="btn btn-secondary mt-4" id="searchByTitle">search by title</button>
+        <button onclick="getSearchMood( this.id)" class="btn btn-secondary mt-4" id="searchByCategory">search by category</button>
+
+        </div>
+
+
+      <div>
+        <div  class="text-center">
+            <button onclick="deleteAllData()" id="deleteALL"  class=" btn btn-danger mt-4 w-75 m-auto d-none text-uppercase"></button>
+
+        </div>
+         <table class="w-100 mt-5 text-center  ">
+            <tr class="text-uppercase">
+                <th>id</th>
+                <th>title</th>
+                <th>price</th>
+                <th>taxes</th>
+                <th>ads</th>
+                <th>discount</th>
+                <th>count</th>
+                <th>total</th>
+                <th>category</th>
+                <th>update</th>
+                <th>delete</th>
+            </tr>
+            <tbody id="tbody">
+               
+               
+                    
+            </tbody>
+        </table>
+    
+      </div>
+       
+         
+
+    </div>
+    
+   <script src="js/index.js"></script>
+   <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
